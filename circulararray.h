@@ -173,6 +173,7 @@ void CircularArray<T>::display(){
 
 template <class T>
 void CircularArray<T>::clear(){
+    /* ACL: Bien */
     for(int erase = 0;erase<size();erase++){
       array[erase] = '\0';
     }
@@ -206,6 +207,7 @@ template <class T>
 bool CircularArray<T>::is_sorted(){
     bool sorted=true;
     if (size()==0) return false;
+    /*ACL: Un array vacío si está ordenado por default*/
     for(int i=0;i<size()-1;i++)
         if(array[i] > array[i+1]) return false;
     return sorted;
